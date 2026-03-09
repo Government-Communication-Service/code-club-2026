@@ -1,3 +1,0 @@
-showMessage = () => {
-  alert("Hello World");
-};
