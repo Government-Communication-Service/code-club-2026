@@ -20,7 +20,7 @@ This goes on every web page before anything else. It ensures the browser renders
 
 </html>
 ```
-8. All content and element tags are place within the \<html> \</html> tags. Next add the <body> tags.
+8. All content and element tags are place within the \<html> \</html> tags. Next add the \<body> tags.
 
 9. Most html element tags begin in this syntax \<body> and end with \</body>.
 ```html
@@ -46,13 +46,13 @@ This goes on every web page before anything else. It ensures the browser renders
 
 12. If you open up the file on your device by using Google Chrome or your preferred browser, you can see the first output of the web page.
 
-13.  You can then add <p> paragraph on the next line
+13.  You can then add \<p> paragraph on the next line
 ```html
 <h1>Hello, World!</h1>
 <p>This is my first website</p>
 ```
 14. Reload the web page of index.html on your browser to see your changes.
-15. Next, add the \<head> tags which are used for non-page content items and metadata. This goes above and outside the <body> tag but within the \<html> tag
+15. Next, add the \<head> tags which are used for non-page content items and metadata. This goes above and outside the \<body> tag but within the \<html> tag
 ```html
 <!DOCTYPE html>
 <html>
@@ -67,7 +67,7 @@ This goes on every web page before anything else. It ensures the browser renders
 16. Within the \<head> tag, add the page \<title> of the web page which displays on the browser tab or bookmark of the web page
 ```html
 <head>
-       <title>My first website</title>
+   <title>My first website</title>
 </head>
 ```
 
