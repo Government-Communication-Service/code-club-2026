@@ -1,7 +1,7 @@
 # Week 1
 ## First web page taster for development
 
-<p>This week, we will breifly introduce a short coding excercise before building a full website.</p>
+<p>This week, we will breifly introduce a short coding exercise before building a full website.</p>
 <p>You can follow the instructions below to get started.</p>
 
 1. Visit https://vscode.dev
