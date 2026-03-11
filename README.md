@@ -1,6 +1,9 @@
 # Week 1
 ## First web page taster for development
 
+<p>This week, we will breifly introduce a short coding excercise before building a full website.</p>
+<p>You can follow the instructions below to get started.</p>
+
 1. Visit https://vscode.dev
 2. Click on New file on the welcome page
 3. Type in “index.html” in the popup
@@ -12,7 +15,7 @@
 <!DOCTYPE html>
 ```
 
-This goes on every web page before anything else. It ensures the browser renders the page in standards mode rather than "quirks mode," preventing display inconsistencies across different browsers.
+<p>This goes on every web page before anything else. It ensures the browser renders the page in standards mode rather than "quirks mode," preventing display inconsistencies across different browsers.</p>
 7. Underneath that add
 
 ```html
@@ -20,9 +23,9 @@ This goes on every web page before anything else. It ensures the browser renders
 
 </html>
 ```
-8. All content and element tags are place within the \<html> \</html> tags. Next add the \<body> tags.
+All content and element tags are place within the \<html> \</html> tags. 
 
-9. Most html element tags begin in this syntax \<body> and end with \</body>.
+9. Next, add the \<body> tags.
 ```html
 <!DOCTYPE html>
 <html>
@@ -31,8 +34,11 @@ This goes on every web page before anything else. It ensures the browser renders
   </body>
 </html>
 ```
+Most html element tags begin in this syntax \<body> and end with \</body>.
+
+
 10. Within the \<body> tags are used for all the content that is displayed to the user. 
-11. Next add an \<h1> heading the to the web page.
+11. Add an \<h1> heading the to the web page.
 
 ```html
 <!DOCTYPE html>
@@ -44,9 +50,9 @@ This goes on every web page before anything else. It ensures the browser renders
 ```
 
 
-12. If you open up the file on your device by using Google Chrome or your preferred browser, you can see the first output of the web page.
+12. If you open up the index.html file on your device by using Google Chrome or your preferred browser, you can see the first output of the web page.
 
-13.  You can then add \<p> paragraph on the next line
+13.  You can then add a \<p> paragraph with some text on the next line
 ```html
 <h1>Hello, World!</h1>
 <p>This is my first website</p>
