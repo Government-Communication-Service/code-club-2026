@@ -32,13 +32,11 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: var(--font);
   font-size: 1rem;
   line-height: 1.5;
   color: var(--black);
-  background: var(--white);
+  background-color: var(--white);
 }
 
 /* --- Layout --- */
@@ -50,7 +48,7 @@ body {
 
 /* ---- Header ---- */
 header {
-  background: var(--black);
+  background-color: var(--black);
   border-bottom: 10px solid var(--blue);
 }
 
@@ -125,7 +123,7 @@ header nav a.active {
 
 /* --- Hero --- */
 .hero {
-  background: var(--blue);
+  background-color: var(--blue);
   padding: 40px 0 35px;
 }
 
@@ -157,7 +155,7 @@ hr {
 /* --- Buttons --- */
 .btn {
   display: inline-block;
-  background: var(--green);
+  background-color: var(--green);
   color: var(--white);
   font-family: var(--font);
   font-size: 1rem;
@@ -170,7 +168,7 @@ hr {
   line-height: 1.2;
 }
 
-.btn:hover { background: var(--green-dark); color: var(--white); text-decoration: none; }
+.btn:hover { background-color: var(--green-dark); color: var(--white); text-decoration: none; }
 .btn:focus { outline: 3px solid var(--yellow); outline-offset: 0; }
 
 .btn--start {
@@ -182,16 +180,16 @@ hr {
 }
 
 .btn--secondary {
-  background: var(--light-grey);
+  background-color: var(--light-grey);
   color: var(--black);
   border-bottom-color: var(--mid-grey);
 }
-.btn--secondary:hover { background: var(--light-grey); color: var(--black); }
+.btn--secondary:hover { background-color: var(--light-grey); color: var(--black); }
 
 
 /* --- Footer --- */
 footer {
-  background: var(--light-grey);
+  background-color: var(--light-grey);
   border-top: 1px solid var(--mid-grey);
   padding: 25px 0;
   margin-top: 40px;
