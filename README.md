@@ -352,7 +352,7 @@ body {
   background-color: #ffffff;
 }
 ```
-8. We can optimise the CSS stylesheets by adding a pseudo class called :root which we can store values that can be reused across the rest of the stylesheets
+8. We can optimise the CSS stylesheets by adding a pseudo class called :root which we can store values that can be reused across the rest of the stylesheets instead of having to individually add these values for each class.
 ```css
 :root {
   --black:       #0b0c0c;
@@ -373,7 +373,7 @@ body {
 }
 
 ```
-9. We can now replace the values to reuse and reference these variables. Use 
+9. We can now replace the values to reuse and reference these variables. Use var(--font) or var(--black) to reference the custom value
 ```css
 body {
     font-family: var(--font);
@@ -442,4 +442,209 @@ header nav a.active {
   opacity: 1;
   text-decoration: underline;
 }
+```
+### Hero banner
+1. We can now add the hero banner or container on index.html. This will be placed under the \<header> tag
+
+```html
+<div class="hero">
+    <div class="container">
+        <h1>Get online.<br>For free.</h1>
+        <p>We help people across the UK access free Wi-Fi, mobile data, donated devices, and digital skills
+            training.</p>
+        <a href="support.html" class="btn btn--start">
+            Find support near me
+        </a>
+    </div>
+</div>
+```
+2. Add the styles for this
+```css
+.hero {
+  background-color: var(--blue);
+  padding: 40px 0 35px;
+}
+
+.hero h1 { color: var(--white); margin-bottom: 15px; }
+.hero p  { color: var(--white); font-size: 1.1875rem; max-width: 560px; margin-bottom: 25px; }
+```
+
+### Typography and spacing
+For the remaining CSS styles of the typography and spacing for the main container, you can add these styles
+```css
+main {
+  padding: 30px 0 60px;
+}
+
+/* --- Typography --- */
+h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
+h2 { font-size: 1.5rem;   font-weight: 700; line-height: 1.25; margin-bottom: 15px; margin-top: 35px; }
+h3 { font-size: 1.125rem; font-weight: 700; line-height: 1.3;  margin-bottom: 10px; margin-top: 25px; }
+
+p  { margin-bottom: 15px; line-height: 1.6; }
+a  { color: var(--blue); }
+a:hover { color: var(--blue-dark); }
+
+.lead { font-size: 1.1875rem; color: var(--dark-grey); margin-bottom: 25px; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--mid-grey);
+  margin: 30px 0;
+}
+```
+
+### Button styles
+For the button styles, add these
+```css
+.btn {
+  display: inline-block;
+  background-color: var(--green);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 18px 9px;
+  border: none;
+  border-bottom: 3px solid var(--green-dark);
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.btn:hover { background-color: var(--green-dark); color: var(--white); text-decoration: none; }
+.btn:focus { outline: 3px solid var(--yellow); outline-offset: 0; }
+
+.btn--start {
+  font-size: 1.125rem;
+  padding: 12px 22px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn--secondary {
+  background-color: var(--light-grey);
+  color: var(--black);
+  border-bottom-color: var(--mid-grey);
+}
+.btn--secondary:hover { background-color: var(--light-grey); color: var(--black); }
+```
+You can now see that the styles for the hero, main container and button have been applied.
+
+![Hero image for index.html](screenshots/09.png)
+
+### The footer
+1. You can add this to each page after the \</main> tag and before the \</body> tag
+
+```html
+<footer>
+    <div class="container">
+        <ul class="footer-links">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Accessibility</a></li>
+        </ul>
+        <p class="footer-meta">
+            All content is available under the
+            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence
+                v3.0</a>
+            &copy; Crown copyright
+        </p>
+    </div>
+</footer>
+```
+2. For the CSS, apply these
+```css
+footer {
+  background-color: var(--light-grey);
+  border-top: 1px solid var(--mid-grey);
+  padding: 25px 0;
+  margin-top: 40px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--blue);
+  font-size: 0.875rem;
+}
+
+.footer-meta {
+  font-size: 0.875rem;
+  color: var(--dark-grey);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-meta a { color: var(--blue); }
+```
+### Breadcrumbs
+1. For the breadcrumbs, apply these to eligibility.html, support.html and contact.html. Any page other than index.html. Apply this after the \<header> tag and before the \<main> tag.
+
+eligibility.html
+```html
+<nav class="breadcrumb">
+    <div class="container">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Eligibility</li>
+        </ol>
+    </div>
+</nav>
+```
+support.html
+```html
+<nav class="breadcrumb">
+    <div class="container">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Find Support</li>
+        </ol>
+    </div>
+</nav>
+```
+contact.html
+```html
+<nav class="breadcrumb">
+    <div class="container">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Contact</li>
+        </ol>
+    </div>
+</nav>
+```
+
+and then apply the styles to this
+
+```css
+.breadcrumb {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--mid-grey);
+  font-size: 0.875rem;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb li + li::before {
+  content: "›";
+  color: var(--mid-grey);
+  margin-right: 6px;
+}
+
 ```
