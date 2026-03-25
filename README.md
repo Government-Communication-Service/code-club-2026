@@ -1,6 +1,20 @@
 # Week 3
 ## Continue building the marketing website
-<p>This week, we will continue to build the website, learn how to apply styles and add more content.</p>
+This is an exercise continued on from week 2: https://github.com/Government-Communication-Service/code-club-2026/tree/week-2
+<p>This week, we will continue to build the website using HTML and CSS, learn how to apply styles and add more content.</p>
+
+## Contents
+
+- [Open your existing folder](#open-your-existing-folder)
+- [Working with CSS](#working-with-css)
+- [Binding HTML and CSS together](#binding-html-and-css-together)
+- [Hero banner](#hero-banner)
+- [Typography and spacing](#typography-and-spacing)
+- [Button styles](#button-styles)
+- [The footer](#the-footer)
+- [Breadcrumbs](#breadcrumbs)
+- [Adding images](#adding-images)
+- [Adding icons](#adding-icons)
 
 ### Open your existing folder
 1. Visit https://vscode.dev
@@ -8,7 +22,7 @@
 ![open folder button](screenshots/01.png)<br><br>
 3. Click on code-club-2026 (or the folder you created)
 
-Note: When making changes to your files, reload the page on your browser to see the changes being applied on the code.
+Note: When making changes to your files, reload the page or file on your browser to see the changes being applied from the code changes.
 
 ### Working with CSS
 #### Styling the header
@@ -66,7 +80,7 @@ See these links to understand spacing and units in CSS
 6. We now add the remaining styles for the \<header>
 ```css
 header {
-  background: #0b0c0c;
+  background-color: #0b0c0c;
   border-bottom: 10px solid #1d70b8;
 }
 
@@ -454,6 +468,9 @@ footer {
 
 .footer-meta a { color: var(--blue); }
 ```
+
+![footer example](screenshots/10.png)
+
 ### Breadcrumbs
 1. For the breadcrumbs, apply these to eligibility.html, support.html and contact.html. Any page other than index.html. Apply this after the \<header> tag and before the \<main> tag.
 
@@ -514,3 +531,148 @@ and then apply the styles to this
 }
 
 ```
+![breadcrumbs navigation example](screenshots/11.png)
+
+### Adding images
+Image tags are defined slightly differently in HTML as it doesn't have text or additional content within the element 
+but usually has a sourced image that can be located either on the same website or an external one.
+
+A local image example that could be stored on the same website directory
+
+```html
+<img src="/my-files/my-cat.jpg" alt="An image of a cat" />
+```
+
+An external image from another website
+```html
+ <img
+    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&auto=format&fit=crop&q=60"
+    alt="People using laptops and devices together at a community table" />
+```
+These are some of the attributes used for images 
+- src - Where you define the link to the image
+- alt - Used for describing the image content for accessibility purposes
+
+You can also see that the syntax is slightly different from other HTML elements 
+
+Correct: `<img />`
+
+Incorrect: `<img></img>`
+
+We are now going to add an image to the hero banner. You can see that currently the hero banner is defined like this.
+
+```html
+<div class="hero">
+    <div class="container">
+        <h1>Get online.<br>For free.</h1>
+        <p>We help people across the UK access free Wi-Fi, mobile data, donated devices, and digital skills
+            training.</p>
+        <a href="support.html" class="btn btn--start">
+            Find support near me
+        </a>
+    </div>
+</div>
+```
+Now we want to add an image side by side with the text content like this
+
+```html
+
+<div class="hero">
+    <div class="container">
+        <div class="hero-text">
+            <h1>Get online.<br>For free.</h1>
+            <p>We help people across the UK access free Wi-Fi, mobile data, donated devices, and digital skills
+                training.</p>
+            <div>
+                <a href="support.html" class="btn btn--start">
+                    Find support near me
+                </a>
+            </div>
+
+        </div>
+        <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&auto=format&fit=crop&q=60"
+            alt="People using laptops and devices together at a community table"
+            class="hero-image"
+        />
+    </div>
+</div>
+```
+We moved the text elements to another \<div> tag with the class "hero-text" and the \<img /> is next to the hero-text element.
+
+This is so that when we style this, it will apply something called flexbox which can display the layout in a different orientation such as horizontal instead of vertical.
+
+See: https://www.w3schools.com/CSS/css3_flexbox.asp
+
+We can now add the styles for the hero banner
+```css
+.hero .container {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    min-height: 340px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 50px 40px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text h1 { color: var(--white); margin-bottom: 15px; }
+.hero-text p  { color: var(--white); font-size: 1.1875rem; max-width: 460px; margin-bottom: 25px; }
+
+.hero-image {
+    width: 400px;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: block;
+}
+```
+
+![Hero banner example](screenshots/12.png)
+
+### Adding icons
+We can also add or import a third party library to the website. We're going to use Font Awesome for this which is an open source and free to use library.
+
+Add the stylesheet to use Font Awesome styles in the \<head> \</head>
+
+```html
+<head>
+    ...
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+```
+
+You can see that in the href this is coming from an external link.
+
+We can then use this tag in the button of the hero banner. You can add this right arrow icon after the text "Find support near me"
+
+```html
+<div class="hero-text">
+    <h1>Get online.<br>For free.</h1>
+    <p>We help people across the UK access free Wi-Fi, mobile data, donated devices, and digital skills
+        training.</p>
+    <div>
+        <a href="support.html" class="btn btn--start">
+            Find support near me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+    </div>
+
+</div>
+```
+You can see that the library uses \<i> \</i> tags with class names as "fa-solid" and "fa-arrow-right" which is the convention used to define different icons.
+
+![icon on button example](screenshots/13.png)
+
+See Font Awesome library: https://fontawesome.com/search
+
+See the arrow right icon usage details: https://fontawesome.com/icons/arrow-right?f=classic&s=solid
+
+Next week, we'll learn more about styles for smaller screens, some javascript for the cookie banner and finishing the rest of the website. Link: (coming soon)
