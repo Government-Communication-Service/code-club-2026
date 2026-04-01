@@ -68,6 +68,10 @@ header .container {
   text-decoration: none;
 }
 
+.header-logo:hover {
+  color: var(--white);
+}
+
 .header-service {
   color: var(--white);
   font-size: 1rem;

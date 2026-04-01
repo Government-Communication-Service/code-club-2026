@@ -206,7 +206,7 @@ The id on the tags are the reference used to support the link using the hashtag 
 <p>Free sessions with trained Digital Champions — from switching on a device to using online banking.</p>
 ```
 
-If you now navigate to the home page or index.html and click on one of the cards, it will then take you to support page then jump or scroll to that specific content where it is referenced.
+If you now navigate to the home page or index.html and click on one of the cards, it will then take you to support page then jumps or scrolls to that specific content where it is referenced.
 
 ### Eligibility page
 We can now add another 2 lists for the eligibility page for more content
@@ -538,8 +538,10 @@ We also need a page for to remove the preference. Create a cookie.html file then
 
 ![Cookie page example](screenshots/16.png)
 
-You can also update the links on the footer for that page
 
+### Finishing touches
+#### Footer
+You can also update the links on the footer for that cookies.html page. Apply this for all other pages
 ```html
 <ul class="footer-links">
     <li><a href="#">Privacy</a></li>
@@ -548,6 +550,21 @@ You can also update the links on the footer for that page
 </ul>
 
 ```
+#### Menu link hover
+Add this for header logo. The logo is also a link and uses the same styles as other links when hover 
+```css
+.header-logo:hover {
+  color: var(--white);
+}
+```
+#### For accessibility and for screen readers
+We need to update the icons on HTML to avoid confusing screen reader technology. Add aria-hidden=true to the icons
+```html
+<i class="fa-solid fa-wifi card-icon" aria-hidden="true"></i>
+```
+
+Do read up on accessibility and why it's important to use for websites
+- https://www.w3schools.com/accessibility/
 
 ### End of course
 That's the end of the course. You can also have a look at publishing the website using GitHub pages: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
