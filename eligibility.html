@@ -6,8 +6,20 @@
     <title>Check Eligibility – Get Connected</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+<div id="cookie-banner" class="cookie-banner">
+    <div class="container">
+        <h2>Cookies on Get Connected</h2>
+        <p>We use some essential cookies to make this service work.</p>
+        <div class="button-group">
+            <button class="btn" onclick="acceptCookies()">Accept essential cookies</button>
+            <a href="cookies.html" class="btn btn--secondary">View cookies</a>
+        </div>
+    </div>
+</div>
+
 
 <!-- HEADER -->
 <header>
@@ -39,7 +51,32 @@
 
         <h1>Check your eligibility</h1>
         <p class="lead">Some services are open to everyone. Others are for people who meet certain criteria.</p>
+        <h2>Open to everyone</h2>
+        <p>You do not need to prove anything to access these:</p>
+        <ul>
+            <li>Free Wi-Fi at libraries, GP surgeries, and community centres</li>
+            <li>Digital skills training sessions and drop-ins</li>
+        </ul>
 
+        <h2>You may qualify for a device or data SIM if you</h2>
+        <ul>
+            <li>Receive Universal Credit, PIP, Pension Credit, or Jobseeker's Allowance</li>
+            <li>Are a care leaver aged 16–25</li>
+            <li>Are in temporary or supported accommodation</li>
+            <li>Are a registered carer</li>
+            <li>Are referred by a social worker, GP, or key worker</li>
+        </ul>
+
+        <div class="inset">
+            <p>If you are not sure whether you qualify, <a href="contact.html">contact us</a> — we will try to help regardless.</p>
+        </div>
+
+        <hr>
+
+        <div class="warning">
+            <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+            <strong>You will never be turned away without someone trying to help you first.</strong>
+        </div>
     </div>
 </main>
 
@@ -48,7 +85,7 @@
     <div class="container">
         <ul class="footer-links">
             <li><a href="#">Privacy</a></li>
-            <li><a href="#">Cookies</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#">Accessibility</a></li>
         </ul>

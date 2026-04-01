@@ -6,8 +6,19 @@
     <title>Find Support – Get Connected</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+<div id="cookie-banner" class="cookie-banner">
+    <div class="container">
+        <h2>Cookies on Get Connected</h2>
+        <p>We use some essential cookies to make this service work.</p>
+        <div class="button-group">
+            <button class="btn" onclick="acceptCookies()">Accept essential cookies</button>
+            <a href="cookies.html" class="btn btn--secondary">View cookies</a>
+        </div>
+    </div>
+</div>
 
 <!-- HEADER -->
 <header>
@@ -41,6 +52,51 @@
         <p class="lead">Support is available across the UK. Visit or contact any of the locations below to get
             started.</p>
 
+        <ul class="results-list">
+            <li class="result-item">
+                <strong class="tag tag--green">Wi-Fi</strong>
+                <div>
+                    <p class="result-title">Rutherglen Library</p>
+                    <p class="result-detail">163 Main Street – Open Mon–Fri 9am–8pm</p>
+                </div>
+            </li>
+            <li class="result-item">
+                <strong class="tag">Data</strong>
+                <div>
+                    <p class="result-title">O2 Community Data Grant</p>
+                    <p class="result-detail">Free 3GB SIM for eligible residents – apply online</p>
+                </div>
+            </li>
+            <li class="result-item">
+                <strong class="tag tag--orange">Device</strong>
+                <div>
+                    <p class="result-title">South Side Device Hub</p>
+                    <p class="result-detail">Govanhill Community Centre – 8 devices available</p>
+                </div>
+            </li>
+            <li class="result-item">
+                <strong class="tag tag--purple">Training</strong>
+                <div>
+                    <p class="result-title">Digital Drop-in – Thursdays 10am</p>
+                    <p class="result-detail">Mitchell Library – free, no booking needed</p>
+                </div>
+            </li>
+        </ul>
+
+        <h2>What's available</h2>
+
+        <h3 id="wifi"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</h3>
+        <p>Find hotspots at libraries, GP surgeries, Jobcentres, and community centres. No sign-up needed at most locations.</p>
+
+        <h3 id="data"><i class="fa-solid fa-mobile"></i> Free mobile data</h3>
+        <p>Donated SIM cards and top-ups from major networks. <a href="eligibility.html">Check if you qualify.</a></p>
+
+        <h3 id="devices"><i class="fa-solid fa-computer"></i> Donated devices</h3>
+        <p>Refurbished laptops and tablets, wiped and tested. Available to eligible individuals with a 90-day guarantee.</p>
+
+        <h3 id="training"><i class="fa-solid fa-user-graduate"></i> Digital skills training</h3>
+        <p>Free sessions with trained Digital Champions — from switching on a device to using online banking.</p>
+
     </div>
 </main>
 
@@ -49,7 +105,7 @@
     <div class="container">
         <ul class="footer-links">
             <li><a href="#">Privacy</a></li>
-            <li><a href="#">Cookies</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#">Accessibility</a></li>
         </ul>
